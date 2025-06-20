@@ -1,35 +1,56 @@
-
 # 🗑️ Garbage Classification using EfficientNetV2B2
 
-## 📌 Problem Statement
-Classify images of garbage into 6 categories: cardboard, glass, metal, paper, plastic, and trash using a deep learning model.
+This project is part of the **Summer of AI Internship Program 2025 by Edunet Foundation and IBM SkillsBuild**. The goal is to build an intelligent image classifier that identifies types of garbage from images using deep learning.
 
-## 📁 Dataset Used
-[Kaggle - Trash Type Image Dataset](https://www.kaggle.com/datasets/farzadnekouei/trash-type-image-dataset)  
-Total images: 2527  
-Split: 80% Train, 20% Validation, and Test
+---
+
+## 📌 Problem Statement
+
+Efficient garbage classification is essential for environmental sustainability. Manual sorting is inefficient and error-prone. This project leverages deep learning to automate classification of waste into categories such as **plastic, cardboard, metal, paper, glass, and trash**.
+
+---
+
+## 📂 Dataset
+
+- **Source:** [TrashType Image Dataset on Kaggle](https://www.kaggle.com/datasets/farzadnekouei/trash-type-image-dataset)
+- **Classes:** `cardboard`, `glass`, `metal`, `paper`, `plastic`, `trash`
+- **Total Images:** 2527
+
+We manually split the dataset into:
+- `train/`
+- `val/`
+- `test/`
+
+---
 
 ## 🧠 Model Architecture
-- **Base Model:** EfficientNetV2B2 (pretrained on ImageNet)
-- **Added Layers:**
-  - GlobalAveragePooling2D
-  - Dropout(0.2)
-  - Dense(128, ReLU)
-  - Dense(6, Softmax)
 
-## 📊 Performance
-- ✅ **Test Accuracy**: 88.67%
-- 🧪 **Test Loss**: 0.3321
+- Base Model: **EfficientNetV2B2** (pretrained on ImageNet)
+- Layers Added:
+  - `GlobalAveragePooling2D`
+  - `Dense(128, ReLU)`
+  - `Dropout`
+  - `Dense(6, Softmax)`
+- Fine-tuning: First 200 layers frozen, rest trainable
 
-## 💻 How to Use
-1. Upload an image to the Gradio interface
-2. The model will classify it into one of the 6 garbage categories
-3. Displays predicted class and confidence score
+---
 
-## 🌐 Gradio Screenshot
-(Add your screenshot here if needed)
+## 📈 Performance
 
-## 📂 Files Included
-- `Garbage_Classification.ipynb`
-- `garbage_classifier_model.keras`
-- `README.md`
+| Metric       | Value     |
+|--------------|-----------|
+| ✅ Accuracy (Test) | 88.67%    |
+| ✅ Validation Accuracy | ~87%    |
+| 🔍 Classes | 6         |
+| 📦 Model Size | ~34MB    |
+
+---
+
+## 🚀 How to Use (Gradio App)
+
+This project includes a simple Gradio-based interface to test predictions:
+
+### ▶️ Launch Interface
+
+```bash
+python app.py
