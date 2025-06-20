@@ -55,3 +55,25 @@ This project includes a simple Gradio-based interface to test predictions:
 ```bash
 iface.launch()
 
+
+
+
+👨‍💻 Author
+Badavath Tharun
+B.Tech CSIT – Malla Reddy College of Engineering
+GitHub: @tharun1503
+
+📬 Acknowledgements
+Edunet Foundation
+
+IBM SkillsBuild
+
+Kaggle Dataset by Farzad Nekouei
+
+🏁 Future Improvements
+Improve f1-score for imbalanced classes
+
+Add mobile deployment via TensorFlow Lite
+
+Expand dataset with real-world garbage images
+
