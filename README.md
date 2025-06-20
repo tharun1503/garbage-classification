@@ -53,4 +53,5 @@ This project includes a simple Gradio-based interface to test predictions:
 ### ▶️ Launch Interface
 
 ```bash
-python app.py
+iface.launch()
+
